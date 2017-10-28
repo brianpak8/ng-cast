@@ -10,9 +10,14 @@ angular.module('video-player')
         console.log(video);
         this.currentVideo = video;
       };
-      search.searchYouTube('cats', (response) => {
-        this.videos = response;
+      
+      
+      this.renderVideos = (videos) => {
+        this.videos = videos;
         this.currentVideo = this.videos[0];
-      }); 
+      };
+      
+      search.searchYouTube('cats', this.renderVideos); 
+      this.search = search.searchYouTube;
     }
   });

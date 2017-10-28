@@ -1,6 +1,7 @@
 angular.module('video-player')
   .service('search', function($http) {
     this.searchYouTube = function(query, cb) {
+      console.log(query);
       $http({
         method: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',

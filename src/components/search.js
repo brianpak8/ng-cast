@@ -4,7 +4,14 @@ angular.module('video-player')
     templateUrl: 'src/templates/search.html',
     
     bindings: {
-      search: '<'
+      search: '<',
+      renderVideos: '<'
+    },
+    controller: function() {
+      
+      console.log(this);
     }
+    
+    
     // TODO
   });
