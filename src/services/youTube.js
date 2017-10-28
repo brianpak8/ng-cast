@@ -5,16 +5,18 @@ angular.module('video-player')
         method: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         params: {
+          part: 'snippet',
           q: 'cats',
           maxResults: 5, 
           key: window.YOUTUBE_API_KEY,
           videoEmbeddable: true,
+          type: 'video'
         },
-        transformResponse: function(response) {
-          console.log(response);
-        }
-      // }).then(function(response) {
-      //   console.log('thanks vinoj its working', response);
+        // transformResponse: function(response) {
+        //   console.log(response);
+        // }
+      }).then(function(response) {
+        console.log('thanks vinoj its working', response);
       });
     };
   });
