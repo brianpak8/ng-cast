@@ -3,21 +3,19 @@ angular.module('video-player')
   .component('app', {
     templateUrl: 'src/templates/app.html',
     
-    controller: function(search) {     
+    controller: function(youTube) {     
       this.videos = window.exampleVideoData;
       this.currentVideo = this.videos[0];
-      this.changeVideo = (video) => {
-        console.log(video);
+      this.selectVideo = (video) => {
         this.currentVideo = video;
       };
       
-      
-      this.renderVideos = (videos) => {
+      this.searchResults = (videos) => {
         this.videos = videos;
         this.currentVideo = this.videos[0];
       };
       
-      search.searchYouTube('cats', this.renderVideos); 
-      this.search = search.searchYouTube;
+      youTube.search('cats', this.searchResults); 
+      this.search = youTube.search;
     }
   });

@@ -5,13 +5,6 @@ angular.module('video-player')
     
     bindings: {
       search: '<',
-      renderVideos: '<'
-    },
-    controller: function() {
-      
-      console.log(this);
+      result: '<'
     }
-    
-    
-    // TODO
   });

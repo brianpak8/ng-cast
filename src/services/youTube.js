@@ -1,6 +1,6 @@
 angular.module('video-player')
-  .service('search', function($http) {
-    this.searchYouTube = function(query, cb) {
+  .service('youTube', function($http) {
+    this.search = function(query, cb) {
       console.log(query);
       $http({
         method: 'GET',
@@ -17,7 +17,7 @@ angular.module('video-player')
         //   console.log(response);
         // }
       }).then(function(response) {
-        console.log('thanks vinoj its working', response);
+        console.log('thanks fam its working', response);
         cb(response.data.items);
       });
     };
