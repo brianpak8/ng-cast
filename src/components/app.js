@@ -5,7 +5,10 @@ angular.module('video-player')
     
     controller: function() {      
       this.videos = window.exampleVideoData;
-      this.onClick = () => {};
       this.currentVideo = this.videos[0];
+      this.changeVideo = (video) => {
+        console.log(video);
+        this.currentVideo = video;
+      };
     }
   });
