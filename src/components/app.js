@@ -16,8 +16,7 @@ angular.module('video-player')
       };
       
       youTube.search('cats', this.searchResults); 
-      this.search = youTube.search;
-      
+  
       this.service = {
         search: youTube.search
       };
